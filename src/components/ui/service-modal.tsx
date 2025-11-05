@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, CheckCircle, ArrowRight, Users, BarChart3, Shield, Clock, Zap, Target } from 'lucide-react';
+import { X, CheckCircle, ArrowRight, BarChart3, Zap } from 'lucide-react';
 import { Button } from './button';
 
 interface ServiceModalProps {

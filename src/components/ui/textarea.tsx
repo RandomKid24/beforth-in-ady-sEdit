@@ -6,13 +6,42 @@ export interface TextareaProps
 
 const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
   ({ className, ...props }, ref) => {
+    const textareaRef = React.useRef<HTMLTextAreaElement | null>(null);
+
+    const adjustHeight = () => {
+      const textarea = textareaRef.current;
+      if (textarea) {
+        textarea.style.height = 'auto';
+        textarea.style.height = `${textarea.scrollHeight}px`;
+      }
+    };
+
+    React.useEffect(() => {
+      adjustHeight();
+    }, []);
+
+    const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+      adjustHeight();
+      if (props.onChange) {
+        props.onChange(e);
+      }
+    };
+
     return (
       <textarea
         className={cn(
-          "flex min-h-[80px] w-full border-b border-gray-300 bg-transparent px-0 py-3 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:border-black disabled:cursor-not-allowed disabled:opacity-50 resize-none",
+          "flex min-h-[60px] w-full border-0 border-b-2 border-border bg-transparent px-0 py-3 text-base text-foreground font-light ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:border-primary transition-colors disabled:cursor-not-allowed disabled:opacity-50 resize-none overflow-hidden",
           className
         )}
-        ref={ref}
+        ref={(node) => {
+          textareaRef.current = node;
+          if (typeof ref === 'function') {
+            ref(node);
+          } else if (ref) {
+            ref.current = node;
+          }
+        }}
+        onChange={handleChange}
         {...props}
       />
     )

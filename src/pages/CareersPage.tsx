@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Users, MapPin, Clock, Briefcase, GraduationCap, Heart, Zap, Globe, Linkedin, Twitter, Facebook, Instagram, Youtube, Building2, TrendingUp, BookOpen, Award, BarChart3, FileText, ExternalLink, Download, HeadphonesIcon, Mail, ChevronDown, ChevronUp } from 'lucide-react';
+import { Users, MapPin, Clock, Briefcase, GraduationCap, Heart, Zap, TrendingUp, ChevronDown, ChevronUp } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { Input } from '../components/ui/input';
@@ -167,10 +167,18 @@ function CareersPage() {
         </header>
 
         {/* Hero Section */}
-        <section className="pt-16 pb-20 md:pt-24 md:pb-32 bg-background">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+        <section className="relative pt-20 pb-24 md:pt-32 md:pb-40 bg-gradient-to-br from-background via-blue-50/30 to-purple-50/20 overflow-hidden">
+          {/* Background Decorative Elements */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute top-20 right-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 left-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-full blur-3xl"></div>
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+          </div>
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <motion.h1 
-              className="text-4xl sm:text-6xl md:text-8xl font-light text-foreground leading-none tracking-tight mb-6 md:mb-8"
+              className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-light text-foreground leading-none tracking-tight mb-8 md:mb-10"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -180,22 +188,22 @@ function CareersPage() {
             </motion.h1>
             
             <motion.p 
-              className="text-lg sm:text-xl md:text-2xl font-light text-muted-foreground max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed px-4"
+              className="text-lg sm:text-xl md:text-2xl font-light text-muted-foreground max-w-3xl mx-auto mb-10 md:mb-14 leading-relaxed px-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               Be part of a forward-thinking team that's transforming businesses through innovative 
-              Frappe HRMS and CRM solutions. We're looking for passionate individuals who share our vision.
+              HRMS and CRM solutions. We're looking for passionate individuals who share our vision.
             </motion.p>
             
             <motion.div 
-              className="flex flex-col sm:flex-row gap-4 justify-center mb-12 md:mb-20 px-4"
+              className="flex flex-col sm:flex-row gap-4 justify-center px-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <Button size="lg" className="w-full sm:w-auto">
+              <Button size="lg" className="w-full sm:w-auto shadow-lg hover:shadow-xl">
                 View Open Positions
               </Button>
               <Button variant="outline" size="lg" className="w-full sm:w-auto">

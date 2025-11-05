@@ -1,4 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ThemeProvider } from "./components/ui/theme-provider";
+import { Loading } from "./components/ui/loading";
+import { useState, useEffect } from "react";
 import HomePage from "./pages/HomePage";
 import ServicesPage from "./pages/ServicesPage";
 import ContactPage from "./pages/ContactPage";
@@ -17,9 +20,25 @@ import Compliance from "./pages/Compliance";
 // import BlogDetailPage from "./pages/BlogDetailPage";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate initial load time
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000); // 3 seconds loading
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
   return (
-    <Router>
-      <Routes>
+    <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+      <Router>
+        <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/contact" element={<ContactPage />} />
@@ -46,8 +65,9 @@ function App() {
                 <Route path="/api" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl">API Reference Page - Coming Soon</h1></div>} />
                 <Route path="/downloads" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl">Downloads Page - Coming Soon</h1></div>} />
                 <Route path="/support" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl">Support Center Page - Coming Soon</h1></div>} />
-      </Routes>
-    </Router>
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
 }
 

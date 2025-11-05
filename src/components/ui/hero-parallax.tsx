@@ -19,25 +19,21 @@ export const HeroParallax = ({
     offset: ["start start", "end start"],
   });
 
-  const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
 
   const translateX = useTransform(
     scrollYProgress,
     [0, 1],
-    [0, 1000],
-    springConfig
+    [0, 1000]
   );
   const translateXReverse = useTransform(
     scrollYProgress,
     [0, 1],
-    [0, -1000],
-    springConfig
+    [0, -1000]
   );
   const rotateX = useTransform(
     scrollYProgress,
     [0, 0.2],
-    [15, 0],
-    springConfig
+    [15, 0]
   );
   const opacity = useTransform(scrollYProgress, [0, 0.2], [0.2, 1]);
   const rotateZ = useTransform(scrollYProgress, [0, 0.2], [20, 0]);
@@ -96,7 +92,7 @@ export const Header = () => {
       <h1 className="text-2xl md:text-7xl font-bold text-black">
         Transform <br /> your business.
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 text-gray-600">
+      <p className="max-w-2xl text-base md:text-xl mt-8 text-muted-foreground">
         Enterprise ERP solutions that streamline operations and drive growth through intelligent automation.
       </p>
     </div>

@@ -24,7 +24,7 @@ export function Footer() {
               <span className="text-2xl font-semibold text-foreground">Beforth</span>
             </div>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Transforming businesses through Frappe HRMS and CRM solutions. We help companies streamline HR operations, manage customer relationships, and accelerate growth with open-source technology.
+              Transforming businesses through innovative HRMS and CRM solutions. We help companies streamline HR operations, manage customer relationships, and accelerate growth with modern technology.
             </p>
             <div className="flex space-x-4">
               {[
@@ -141,7 +141,7 @@ export function Footer() {
           <div className="max-w-2xl mx-auto text-center">
             <h3 className="text-2xl font-semibold text-foreground mb-4">Stay Updated</h3>
             <p className="text-muted-foreground mb-6">
-              Get the latest insights on Frappe HRMS and CRM trends, implementation tips, and open-source business solutions.
+              Get the latest insights on HRMS and CRM trends, implementation tips, and business solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <Input 
