@@ -30,7 +30,6 @@ const services = [
     description: "Comprehensive HRMS solution with extensive HR features for complete workforce management, like our implementation for Aureole Group.",
     icon: <Users className="h-8 w-8" />,
     className: "md:col-span-2",
-    demoUrl: "https://hrms.aureolegroup.com/login",
     header: (
       <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-blue-50/50 to-indigo-100/50 dark:from-blue-950/30 dark:to-indigo-900/30 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-indigo-600/10"></div>
