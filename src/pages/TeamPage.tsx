@@ -23,21 +23,21 @@ const teamMembers = [
     role: "CEO",
     bio: "Manages all the things with visionary leadership and strategic direction.",
     image: "https://ui-avatars.com/api/?name=Vivek+Zope&size=200&background=3b82f6&color=fff&bold=true&format=svg",
-    linkedin: "#"
+    email: "vivek.zope@beforth.in"
   },
   {
     name: "Ritesh Mahale",
     role: "CTO",
     bio: "Expert in Backend Development and system architecture with deep technical expertise.",
     image: "https://ui-avatars.com/api/?name=Ritesh+Mahale&size=200&background=6366f1&color=fff&bold=true&format=svg",
-    linkedin: "#"
+    email: "ritesh.mahale@beforth.in"
   },
   {
     name: "Aditya Badgujar",
     role: "COO",
     bio: "Research and Development expert specializing in Frappe framework and innovation.",
     image: "https://ui-avatars.com/api/?name=Aditya+Badgujar&size=200&background=8b5cf6&color=fff&bold=true&format=svg",
-    linkedin: "#"
+    email: "aditya.badgujar@beforth.in"
   },
 ];
 
@@ -138,13 +138,7 @@ function TeamPage() {
                     <p className="text-primary font-medium mb-3">{member.role}</p>
                     <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{member.bio}</p>
                     <div className="flex justify-center space-x-2">
-                      <a href={member.linkedin} className="text-muted-foreground hover:text-blue-600 transition-colors">
-                        <Linkedin className="w-5 h-5" />
-                      </a>
-                      <a href="#" className="text-muted-foreground hover:text-blue-400 transition-colors">
-                        <Twitter className="w-5 h-5" />
-                      </a>
-                      <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                      <a href={`mailto:${member.email}`} className="text-muted-foreground hover:text-foreground transition-colors">
                         <Mail className="w-5 h-5" />
                       </a>
                     </div>

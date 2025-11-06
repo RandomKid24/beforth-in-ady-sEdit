@@ -76,7 +76,7 @@ const features = [
   {
     icon: <Shield className="h-6 w-6" />,
     title: "Enterprise-Grade Security",
-    description: "Bank-level security with data encryption, access controls, and compliance with international standards."
+    description: "Your data stays private with strong encryption and secure access controls. We protect your business information like it's our own."
   },
   {
     icon: <Target className="h-6 w-6" />,
@@ -486,8 +486,8 @@ function HomePage() {
             <motion.div className="text-center mt-12" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} viewport={{ once: true }}>
               <Button size="lg" variant="outline" className="w-full sm:w-auto" asChild>
                 <a href="/contact">
-                  <span className="hidden sm:inline">Contact Us for Custom Implementation</span>
-                  <span className="sm:hidden">Custom Implementation</span>
+                  <span className="hidden sm:inline">Contact Us for Implementation</span>
+                  <span className="sm:hidden">Implementation</span>
                 </a>
               </Button>
             </motion.div>

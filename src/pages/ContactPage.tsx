@@ -297,11 +297,9 @@ function ContactPage() {
                   <h3 className="text-xl font-semibold text-foreground mb-6">Follow Us</h3>
                   <div className="flex gap-3">
                     {[
-                      { icon: Linkedin, href: "#", label: "LinkedIn" },
-                      { icon: Twitter, href: "#", label: "Twitter" },
-                      { icon: Facebook, href: "#", label: "Facebook" },
-                      { icon: Instagram, href: "#", label: "Instagram" },
-                      { icon: Youtube, href: "#", label: "YouTube" }
+                      { icon: Linkedin, href: "https://in.linkedin.com/company/beforth", label: "LinkedIn" },
+                      { icon: Instagram, href: "https://www.instagram.com/beforth.in?igsh=MWc4dThsMm8wa245dg==", label: "Instagram" },
+                      { icon: Mail, href: "mailto:support@beforth.in", label: "Email" }
                     ].map((social, index) => (
                       <a
                         key={index}
@@ -350,11 +348,11 @@ function ContactPage() {
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <Button variant="secondary" size="lg" className="w-full sm:w-auto">
-                Schedule Free Consultation
+              <Button variant="secondary" size="lg" className="w-full sm:w-auto" asChild>
+                <a href="/contact">Contact Us Directly</a>
               </Button>
-              <Button variant="secondary" size="lg" className="w-full sm:w-auto">
-                Download Brochure
+              <Button variant="secondary" size="lg" className="w-full sm:w-auto" asChild>
+                <a href="tel:+919766183834">Call Us Now</a>
               </Button>
             </motion.div>
           </div>

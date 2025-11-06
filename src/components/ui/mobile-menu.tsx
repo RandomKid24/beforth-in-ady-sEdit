@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Linkedin, Instagram, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from './button';
 import { Logo } from './logo';
@@ -57,13 +57,24 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ navItems }) => {
                     <Logo />
                     <span className="text-xl font-semibold text-foreground">Beforth</span>
                   </div>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    onClick={toggleMenu}
-                  >
-                    <X className="h-6 w-6" />
-                  </Button>
+                  <div className="flex items-center space-x-2">
+                    <a href="https://in.linkedin.com/company/beforth" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-blue-600 transition-colors">
+                      <Linkedin className="h-5 w-5" />
+                    </a>
+                    <a href="https://www.instagram.com/beforth.in?igsh=MWc4dThsMm8wa245dg==" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-pink-600 transition-colors">
+                      <Instagram className="h-5 w-5" />
+                    </a>
+                    <a href="mailto:support@beforth.in" className="text-muted-foreground hover:text-gray-600 transition-colors">
+                      <Mail className="h-5 w-5" />
+                    </a>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={toggleMenu}
+                    >
+                      <X className="h-6 w-6" />
+                    </Button>
+                  </div>
                 </div>
                 
                 {/* Navigation */}

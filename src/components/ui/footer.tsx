@@ -28,11 +28,9 @@ export function Footer() {
             </p>
             <div className="flex space-x-4">
               {[
-                { icon: Linkedin, href: "#", color: "hover:text-blue-600" },
-                { icon: Twitter, href: "#", color: "hover:text-blue-400" },
-                { icon: Facebook, href: "#", color: "hover:text-blue-700" },
-                { icon: Instagram, href: "#", color: "hover:text-pink-600" },
-                { icon: Youtube, href: "#", color: "hover:text-red-600" }
+                { icon: Linkedin, href: "https://in.linkedin.com/company/beforth", color: "hover:text-blue-600" },
+                { icon: Instagram, href: "https://www.instagram.com/beforth.in?igsh=MWc4dThsMm8wa245dg==", color: "hover:text-pink-600" },
+                { icon: Mail, href: "mailto:support@beforth.in", color: "hover:text-gray-600" }
               ].map((social, index) => (
                 <motion.a
                   key={index}
