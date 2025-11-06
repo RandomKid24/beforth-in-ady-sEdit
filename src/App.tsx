@@ -22,10 +22,11 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate initial load time
+    // Loading time between 0.5-1 second
+    const loadingTime = Math.random() * 500 + 500; // 500ms to 1000ms
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 3000); // 3 seconds loading
+    }, loadingTime);
 
     return () => clearTimeout(timer);
   }, []);

@@ -485,8 +485,11 @@ function HomePage() {
             </div>
             
             <motion.div className="text-center mt-12" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} viewport={{ once: true }}>
-              <Button size="lg" variant="outline" asChild>
-                <a href="/contact">Contact Us for Custom Implementation</a>
+              <Button size="lg" variant="outline" className="w-full sm:w-auto" asChild>
+                <a href="/contact">
+                  <span className="hidden sm:inline">Contact Us for Custom Implementation</span>
+                  <span className="sm:hidden">Custom Implementation</span>
+                </a>
               </Button>
             </motion.div>
           </div>

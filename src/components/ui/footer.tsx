@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Linkedin, Twitter, Facebook, Instagram, Youtube, Building2, Users, TrendingUp, Award, Mail, FileText } from 'lucide-react';
+import { Linkedin, Twitter, Facebook, Instagram, Youtube, Building2, Users, TrendingUp, Mail } from 'lucide-react';
 import { Button } from './button';
 import { Input } from './input';
 import { Logo } from './logo';
@@ -10,7 +10,7 @@ export function Footer() {
     <footer className="bg-background border-t border-border py-16 md:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 mb-12">
           {/* Company Info */}
           <motion.div 
             className="lg:col-span-1"
@@ -54,17 +54,11 @@ export function Footer() {
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-lg font-semibold text-foreground mb-6">Services</h3>
+            <h3 className="text-lg font-semibold text-foreground mb-6">Our Products</h3>
             <ul className="space-y-3">
               {[
-                "HRMS Implementation",
-                "CRM Solutions",
-                "System Integration",
-                "Training & Support",
-                "Process Optimization",
-                "Custom Solutions",
-                "Payroll Management",
-                "Lead Management"
+                "Frappe HRMS",
+                "4form CRM"
               ].map((service, index) => (
                 <li key={index}>
                   <Link to="/services" className="text-muted-foreground hover:text-foreground transition-colors">
@@ -93,31 +87,6 @@ export function Footer() {
                 // { name: "Partners", icon: Globe, href: "/partners" },
                 // { name: "Investors", icon: BarChart3, href: "/investors" },
                 { name: "Contact", icon: Mail, href: "/contact" }
-              ].map((item, index) => (
-                <li key={index} className="flex items-center">
-                  <item.icon className="h-4 w-4 text-muted-foreground mr-2" />
-                  <Link to={item.href} className="text-muted-foreground hover:text-foreground transition-colors">
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-          {/* Fun Tools */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-lg font-semibold text-foreground mb-6">Fun Tools</h3>
-            <ul className="space-y-3">
-              {[
-                { name: "Achievement Badge Generator", icon: Award, href: "/achievement-badge-generator" },
-                { name: "Office Quote Generator", icon: FileText, href: "/office-quote-generator" },
-                { name: "Workplace Compliment Generator", icon: Award, href: "/compliment-generator" },
-                // { name: "Documentation", icon: FileText, href: "/documentation" }
               ].map((item, index) => (
                 <li key={index} className="flex items-center">
                   <item.icon className="h-4 w-4 text-muted-foreground mr-2" />
