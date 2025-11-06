@@ -8,7 +8,7 @@ import { Logo } from '../components/ui/logo';
 import { MobileMenu } from '../components/ui/mobile-menu';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Mail, Phone, MapPin, Clock, Linkedin, Twitter, Facebook, Instagram, Youtube } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Linkedin, Instagram } from 'lucide-react';
 import { NavLink } from '../components/ui/nav-link';
 import { Footer } from '../components/ui/footer';
 

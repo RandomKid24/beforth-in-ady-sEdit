@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Linkedin, Twitter, Facebook, Instagram, Youtube, Building2, Users, TrendingUp, Mail } from 'lucide-react';
+import { Linkedin, Instagram, Mail, Building2, Users, TrendingUp } from 'lucide-react';
 import { Button } from './button';
 import { Input } from './input';
 import { Logo } from './logo';
